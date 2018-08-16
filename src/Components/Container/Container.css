@@ -1,5 +1,4 @@
 .container {
-    margin-top:10px;
     margin-bottom: 20px; 
     height: 100%;
     display: flex;
@@ -8,5 +7,4 @@
     padding: 20px;
     justify-content: center;
     align-content: center;
-    border-radius: 6px; 
   }
