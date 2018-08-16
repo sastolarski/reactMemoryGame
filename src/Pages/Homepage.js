@@ -18,17 +18,15 @@ class Homepage extends Component {
     this.checkIfClicked = this.checkIfClicked.bind(this);
   }
   
-  // check if a card has been clicked
+  // Function for when a card is clicked
   checkIfClicked(id) {
-    // create a copy of the cards and use a random method to sort the array
     let clickedCard = this.state.cards.filter(card => card.id === id)[0];
     let cardsCopy = this.state.cards.slice().sort(function(a, b){return 0.5 - Math.random()});
-    // if a card has not been clicked, set its clicked state to true
+
     if (!clickedCard.clicked) {
       clickedCard.clicked = true;
       cardsCopy[cardsCopy.findIndex((card) => card.id === id)] = clickedCard;
       
-      // set the state and increment the counter
       this.setState({
         cards: cardsCopy,
         currentScore: this.state.currentScore + 1,
@@ -36,7 +34,6 @@ class Homepage extends Component {
       });
     }
     
-    // if a card has been clicked already, then set its click to false and reset the game
     else {
       
       let resetCardsCopy = cardsCopy.map((card) => {
@@ -53,7 +50,6 @@ class Homepage extends Component {
     } 
   }
   
-  // render the header, score, wrapper, and footer on the page using the current state values
   render() {
     return (
       <div className="container">
