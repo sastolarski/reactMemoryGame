@@ -32,6 +32,21 @@ class Homepage extends Component {
             });
             
         }
+        else if (this.state.currentScore === 12){
+            alert("You Win. Try Again.")
+            let resetCardsCopy = cardsCopy.map((card) => {
+                return {
+                    id: card.id,
+                    image: card.image,
+                    clicked: false,
+                }
+            });
+            this.setState({
+                cards: resetCardsCopy,
+                currentScore: 0,
+            });
+
+        }
 
         else {
             alert("You Lose. Try Again.")

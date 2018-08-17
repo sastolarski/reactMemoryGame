@@ -1,11 +1,10 @@
 .card {
-    border-radius: 2px;
     height: 175px;
     margin: 1rem;
     position: relative;
     width: 180px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-    border-radius: 6px; 
+    box-shadow: 0 3px 6px black, 0 3px 6px black;
+    border-radius: 60px; 
   }
   
   .img-container {
